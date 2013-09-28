@@ -1,13 +1,21 @@
 <head>
   <title>echolocation</title>
+  <link rel="stylesheet" href="webaudio.css" type="text/css" media="screen">
 </head>
 
 <body>
-  {{> hello}}
+  {{> controls}}
+  {{> visualizer}}
 </body>
 
-<template name="hello">
+<template name="controls">
   <h1>Hello World!</h1>
   {{greeting}}
-  <input type="button" value="Click" />
+  <input id="play" type="button" value="Play" />
+  <input id="listen" type="button" value="Listen" />
+  <input id="visualize" type="button" value="Visualize" />
+</template>
+
+<template name="visualizer">
+  <canvas id="visualizer" style="display:none"></canvas>
 </template>
